@@ -6,7 +6,7 @@ The app is currently in limited beta testing.
 
 ## Providing feedback
 
-Right now, the app is in private testing with Test Flight. If you are interested in becoming part of the beta, please fill out this form: TODO
+Right now, the app is in private testing with Test Flight. If you are interested in becoming part of the beta, please fill out this form: https://forms.gle/LSrG1oXedWQv3TDc7
 
 While testing, you can either file bugs and suggestion through the TestFlight app or on this repository. Make sure to include steps to reproduce any bugs.
 
