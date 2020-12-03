@@ -2,11 +2,11 @@
 
 Beatsy is an augmented reality music visualizer app for iOS. Distort real world surfaces using the beat of music.
 
-The app is currently in limited beta testing.
+The app is currently in beta testing.
 
 ## Providing feedback
 
-Right now, the app is in private testing with Test Flight. If you are interested in becoming part of the beta, please fill out this form: https://forms.gle/LSrG1oXedWQv3TDc7
+Right now, the app is in beta testing with Test Flight. If you are interested in becoming part of the beta, just follow this link on an iPhone: https://testflight.apple.com/join/64mlg2hm
 
 While testing, you can either file bugs and suggestion through the TestFlight app or on this repository. Make sure to include steps to reproduce any bugs.
 
