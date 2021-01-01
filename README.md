@@ -56,11 +56,32 @@ Tap and hold the camera button to start recording a video. This starts a countdo
 
 After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet.
 
+## Advanced options
+
+### Foreground occlusion
+
+(Note that foreground occlusion requires a device with a LiDAR sensor, such as the iPhone 12 Pro)
+
+Foreground occlusion uses depth data from the LiDAR sensor to avoid distorting objects that appear in front of the water effect. This foreground object could be a person, your hand, or a wall. The result makes it look like the water effect is better integrated into the world instead of merely being an effect on your screen.
+
+To enable foreground occlusion, tap the lightbulb icon and toggle "Foreground Occlusion". Keep in mind that the effect is not perfect. If you don't need it, I suggest turning the feature off.
+
+For best results with foreground occlusion:
+
+- Make sure the water plane is exactly placed on the real world surface. You may notice significant issues if the plane is placed a few cm above or below the real surface. 
+
+- Only enable foreground occlusion if the surface is flat. If the surface is angled or pitted, foreground occlusion may cause weird artifacts.
+
+- Keep in mind that objects only a few cm from the surface will be considered part of the surface. Foreground occlusion works best when there is at least a 25cm difference in depth between the foreground object and the surface (although the margin it uses internally is closer to 10cm). 
+
+- Foreground objects can only be around 4 meter from the phone. This is a limitation of the LiDAR sensor.
+
+
 ## Feedback
 
-Love Beatsy? Be sure to tell your friends about it and share any cool visualizations you create using the app. If you are feeling especially generous, please can also write an App Store review. This really helps other people find the app.
+Love Beatsy? Be sure to tell your friends about it and share any cool visualizations you create using the app. If you are feeling especially generous, please also write an App Store review. This really helps other people find the app.
 
-Run into a bug or want to request a few feature? Just [file an issue][issues]!
+Run into a bug or want to request a new feature? Just [file an issue][issues]!
 
 [app]: https://apps.apple.com/us/app/beatsy/id1543162330
 [issues]: https://github.com/mattbierner/beatsy-support/issues
