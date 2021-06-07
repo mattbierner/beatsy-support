@@ -1,8 +1,8 @@
 # Beatsy
 
-Beatsy is an augmented reality music visualizer app for iOS. Distort real world surfaces using the beat of music. The app is [available for free on the app store][app].
+Beatsy is an augmented reality music visualizer app for iPhone and iPad. Distort real world surfaces using the beat of music. The app is [available for free on the App Store][app].
 
-This repo provides documentation on using Beatsy. If you run into any issues or have any feature requests, you can also [file an issue][issues] here.
+This documentation covers the basics of using Beatsy. If you run into any issues or have any feature requests, you can also [file an issue][issues] here.
 
 ## Using the app
 
@@ -38,23 +38,36 @@ Beatsy can only visualize songs that you have copied to your device. It does not
 
 ### Customizing the Visualizer
 
-Tap on the wave icon to change the visualizer or edit the settings for the current visualizer. Beatsy currently offers two built-in visualizers:
+Tap on the wave icon to change the visualizer or edit the settings for the current visualizer. Beatsy currently offers four built-in visualizers:
 
 - `Speaker` — Circular visualizer that distorts the surface using smooth waves. The visual effect is sort of like a giant speaker.
 
 - `Wave` — Breaks music up into sections (e.g. bass, mid, treble) and visualizes how the intensity of the music changes over time. 
 
+- `Ferro` - A visualizer inspired by magnetic fluid. Offers a number a customization options.
+
+- `Spectrum` - Simple spectrum visualizer with 3 display modes.
+
 I plan on adding more visualizers in the future too!
+
+### Immersive visualizers
+
+For users that have a device with a LiDAR sensor, you can also try Beatsy's immersive visualizers. Unlike the standard visualizers, these can distort the world around you in three dimensions instead of having to be placed on on a flat surface.
+
+By default, immersive visualizers will distort the world around your current position. If you open up the visualizer settings and switch to center the visualizer at `Placement position`, the visualizer will instead be centered at .wherever you place it in the world.
+
+> 🎵 **Note**: Immersive visualizers work by building up a 3D model of the world around you. This model may be incomplete. To improve the quality of the distortion effects, pan your phone over any areas of the scene you'd like to distort. You can also try viewing the same part of the scene from different angles to improve the 3D world model.
+
 
 ### Sharing
 
-Tap the circular camera button to capture a screenshot of the current visualization. This screenshot hides all UI elements so that you only see the visualizer.
+Tap the camera button on the right side to capture a screenshot of the current visualization. This screenshot hides all UI elements so that you only see the visualizer.
 
-Tap and hold the camera button to start recording a video. This starts a countdown, with recording starting after three seconds. Tap the camera button again to stop recording. While recording, you can interact with the app and adjust the visualizer. Videos also record the microphone input.
+Tap the video button to start recording a video. This will show a prompt asking if you'd also like to record your microphone input in addition to any playing music. Tap the video button again to stop recording.
 
 > 🎵 **Note**: Keep in mind that while you are free to share any content created with Beatsy, music may be subject to copyright. To be safe, make sure to get the copyright holder's permissions before publicly posting videos with music.
 
-After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet.
+After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet. you can also trim videos right in the app.
 
 ## Advanced options
 
