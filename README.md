@@ -67,7 +67,7 @@ Tap the video button to start recording a video. This will show a prompt asking 
 
 > 🎵 **Note**: Keep in mind that while you are free to share any content created with Beatsy, music may be subject to copyright. To be safe, make sure to get the copyright holder's permissions before publicly posting videos with music.
 
-After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet. you can also trim videos right in the app.
+After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet. You can also trim videos right in the app.
 
 ## Advanced options
 
@@ -75,17 +75,17 @@ After taking a video or screenshot, you can download it to your photos or share 
 
 (Note that foreground occlusion requires a device with a LiDAR sensor, such as the iPhone 12 Pro)
 
-Foreground occlusion uses depth data from the LiDAR sensor to avoid distorting objects that appear in front of the water effect. This foreground object could be a person, your hand, or a wall. The result makes it look like the water effect is better integrated into the world instead of merely being an effect on your screen.
+Foreground occlusion uses depth data from the LiDAR sensor to avoid distorting objects that appear in front of the visualizer effects. This foreground object could be a person, your hand, or a wall. The result makes it look like the effect is better integrated into the world instead of merely being an effect on your screen.
 
 To enable foreground occlusion, tap the lightbulb icon and toggle "Foreground Occlusion". Keep in mind that the effect is not perfect. If you don't need it, I suggest turning the feature off.
 
 For best results with foreground occlusion:
 
-- Make sure the water plane is exactly placed on the real world surface. You may notice significant issues if the plane is placed a few cm above or below the real surface. 
+- Make sure the visualizer plane is exactly placed on the real world surface. You may notice significant issues if the plane is placed a few cm above or below the real surface. 
 
 - Only enable foreground occlusion if the surface is flat. If the surface is angled or pitted, foreground occlusion may cause weird artifacts.
 
-- Keep in mind that objects only a few cm from the surface will be considered part of the surface. Foreground occlusion works best when there is at least a 25cm difference in depth between the foreground object and the surface (although the margin it uses internally is closer to 10cm). 
+- Keep in mind that objects only a few cm from the surface will be considered part of the surface. Foreground occlusion works best when there is at least a 25cm difference in depth between the foreground object and the surface (although the margin it uses internally is closer to 15cm). 
 
 - Foreground objects can only be around 4 meter from the phone. This is a limitation of the LiDAR sensor.
 
