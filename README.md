@@ -94,27 +94,33 @@ Tap on the wave icon to change the visualizer or edit the settings for the curre
 
 - `Lava Lamp` - Creates blobs of color that respond to the music. These blobs slowly drift upwards. Support immersive, 3D distortion on devices with a LiDAR sensor.
 
-### Immersive visualizers
-
-For users that have a device with a LiDAR sensor, you can also try Beatsy's immersive visualizers. Unlike the standard visualizers, these can distort the world around you in three dimensions instead of having to be placed on on a flat surface.
-
-By default, immersive visualizers will distort the world around your current position. If you open up the visualizer settings and switch to center the visualizer at `Placement position`, the visualizer will instead be centered at .wherever you place it in the world.
-
-> 🎵 **Note**: Immersive visualizers work by building up a 3D model of the world around you. This model may be incomplete. To improve the quality of the distortion effects, pan your phone over any areas of the scene you'd like to distort. You can also try viewing the same part of the scene from different angles to improve the 3D world model.
-
-
 ## Sharing
 
-Tap the camera button on the right side to capture a screenshot of the current visualization.
+Tap the camera button on the right side to capture a image of the current visualization.
 
+<p align="center">
+    <img src="documentation/camera-button.png">
+</p>
 
-This screenshot hides all UI elements so that you only see the visualizer.
+This image hides all UI elements so that you only see the visualizer.
 
-Tap the video button to start recording a video. This will show a prompt asking if you'd also like to record your microphone input in addition to any playing music. Tap the video button again to stop recording.
+Tap the video button to start recording a video.
+
+<p align="center">
+    <img src="documentation/video-button.png">
+</p>
+
+This will show a prompt asking if you'd also like to record your microphone input in addition to any playing music.
+
+<p align="center">
+    <img src="documentation/video-prompt.png">
+</p>
+
+Tap the video button again to stop recording.
 
 > 🎵 **Note**: Keep in mind that while you are free to share any content created with Beatsy, music may be subject to copyright. To be safe, make sure to get the copyright holder's permissions before publicly posting videos with music.
 
-After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet. You can also trim videos right in the app.
+After taking a video or image, you can download it to your photos or share it using the standard iOS share sheet. You can also trim videos right in the app.
 
 # Advanced options
 
