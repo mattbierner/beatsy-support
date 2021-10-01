@@ -1,26 +1,60 @@
-# Beatsy
+<p align="center">
+    <img src="documentation/title.png">
+</p>
 
-Beatsy is an augmented reality music visualizer app for iPhone and iPad. Distort real world surfaces using the beat of music. The app is [available for free on the App Store][app].
+<p align="center">
+    <a href="https://apps.apple.com/us/app/beatsy/id1543162330">
+        <img src="documentation/app-store.png">
+    </a>
+</p>
+
+Beatsy is an augmented reality music visualizer app for iPhone and iPad. Transform the world around you using the beat of music. The app is [available for free on the App Store][app].
 
 This documentation covers the basics of using Beatsy. If you run into any issues or have any feature requests, you can also [file an issue][issues] here.
 
-## Using the app
+# Using Beatsy
 
-### Placing the AR plane
+Beatsy's augmented reality music visualizers let you distort the shapes and colors of the world around you using either music from your library or audio from the microphone.
 
-To get started with Beatsy, first you need to select a real world surface for the visualizer to distort. You can place the visualizer on any flat horizontal or vertical surfaces. The app will walk you through the placement process.
+## Placing visualizers
 
-> 🎵 **Note**: Drag horizontally to rotate the visualizer and pinch to scale it up and down. These controls also work after you have place the visualizer.
+To get started, first you need to place a visualizer in the world. Most often, this means placing the visualizers on a flat horizontal or vertical surfaces. The app will walk you through the placement process.
 
-If you are having trouble placing the visualizer:
+If a valid surface is detected, you will see a grid that shows where the visualizer will be placed.
 
-- Try moving the device about a little. On devices without a LiDAR sensor, this helps with surface detection.
+If you don't see a grid, it likely means that we cannot detect the surface you are looking at. To help with detection:
+
+- Make sure you are trying to place the visualizer on a relatively flat surface. Surfaces with signficant bumps or holes may not be detected. 
+- Try moving the device around while keeping it aimed at the surface. On devices without a LiDAR sensor, this helps with surface detection.
 - Make sure there is enough light for the cameras. Surface detection struggles in low light scenes.
-- Use a surface that has some visual details. Surface detection struggles when pointed at solid color surfaces, such as white walls.
+- Use a surface that has some visual details. Surface detection struggles when pointed at solid color surfaces, such as solid white walls.
 
-### Visualizing microphone
 
-By default, Beatsy visualizes input from the microphone. This is shown by the red microphone button. Just talk or make sound to see the visualizer kick in.
+> 🎵 **Note**: While placing, drag horizontally to rotate the visualizer and pinch to scale it up and down. These controls also work after you have place the visualizer.
+
+Once you are happy with the visualizer's location, press the ✔️ to continue.
+
+### Placing Immersive visualizers
+
+If your device has a LiDAR sensor—such as the iPad pro, the iPhone 12/13 Pro—some of Beatsy's visualizers instead operate in 3D space. These immersive visualizers can be placed anywhere in the world, not just on flat surfaces.
+
+When placing an immersive visualizer, you place the center of the visualizer instead of placing the visualizer on the surface it will distort. The placement position is previewed by a red ball:
+
+![]()
+
+In general, immersive visualizers can only be placed within 5 meters of your device's current position. This is a limitation of the LiDAR sensor. 
+
+> 🎵 **Note**: Some immersive visualizers work by building up a 3D model of the world around you. This model may be incomplete. To improve the quality of the visualizer effects, pan your phone over any areas of the scene you'd like to distort. You can also try viewing the same part of the scene from different angles to improve the 3D world model.
+
+## Visualizing sound from the microphone
+
+By default, Beatsy visualizes audio from the microphone. This is shown by the red microphone button.
+
+<p align="center">
+    <img src="documentation/mic.png">
+</p>
+
+Just talk or make sound to see the visualizer kick in.
 
 > 🎵 **Note**: If the microphone is not working, make sure Beatsy has microphone permissions. In the Settings app, search for `Beatsy` and make sure `Microphone` is checked.
 
@@ -28,7 +62,13 @@ You can also use the microphone to visualize audio from other apps playing over 
 
 ### Visualizing music
 
-To visualize music, tap the center icon with the musical note. This will bring up a music selector. If you instead see an alert title an `Internal Error`, then the Apple Music app is not currently installed on your device. Make sure to reinstall it before trying again.
+To visualize music, tap the center icon with the musical note. This will bring up a music selector.
+
+<p align="center">
+    <img src="documentation/music.png">
+</p>
+
+If you instead see an alert title an `Internal Error`, then the Apple Music app is not currently installed on your device. Make sure to reinstall it before trying again.
 
 Beatsy can only visualize songs that you have copied to your device. It does not support streaming music from cloud services such as Apple Music or Spotify. It also cannot visualize music with DRM protection. I know these limitations suck—I even [wrote a whole piece](https://blog.mattbierner.com/the-war-we-forgot/) about why they exist and why they suck—unfortunately I cannot work around them however.
 
@@ -36,19 +76,23 @@ Beatsy can only visualize songs that you have copied to your device. It does not
 
 > 🎵 **Note**: Services such as [Bandcamp](https://bandcamp.com) offer DRM free music. After purchasing a song, download it and copy it to your device to load it up in Beatsy.
 
-### Customizing the Visualizer
+## Customizing the Visualizer
 
-Tap on the wave icon to change the visualizer or edit the settings for the current visualizer. Beatsy currently offers four built-in visualizers:
+Tap on the wave icon to change the visualizer or edit the settings for the current visualizer. Beatsy currently offers seven built-in visualizers:
+
+- `Ferro` - The default. Inspired by magnetic fluid. Offers a number a customization options.
 
 - `Speaker` — Circular visualizer that distorts the surface using smooth waves. The visual effect is sort of like a giant speaker.
 
-- `Wave` — Breaks music up into sections (e.g. bass, mid, treble) and visualizes how the intensity of the music changes over time. 
-
-- `Ferro` - A visualizer inspired by magnetic fluid. Offers a number a customization options.
+- `Equalizer` — Breaks music up into sections (e.g. bass, mid, treble) and visualizes how the intensity of the music changes over time. 
 
 - `Spectrum` - Simple spectrum visualizer with 3 display modes.
 
-I plan on adding more visualizers in the future too!
+- `Waves` - Sends waves of distortion rippling out from a the center of the visualizer. Support immersive, 3D distortion on devices with a LiDAR sensor.
+
+- `Color Waves` - Sends waves of color rippling out from a the center of the visualizer. These colors can be customized and correspond to the different components of the music (bass, mid, treble). Support immersive, 3D distortion on devices with a LiDAR sensor.
+
+- `Lava Lamp` - Creates blobs of color that respond to the music. These blobs slowly drift upwards. Support immersive, 3D distortion on devices with a LiDAR sensor.
 
 ### Immersive visualizers
 
@@ -59,9 +103,12 @@ By default, immersive visualizers will distort the world around your current pos
 > 🎵 **Note**: Immersive visualizers work by building up a 3D model of the world around you. This model may be incomplete. To improve the quality of the distortion effects, pan your phone over any areas of the scene you'd like to distort. You can also try viewing the same part of the scene from different angles to improve the 3D world model.
 
 
-### Sharing
+## Sharing
 
-Tap the camera button on the right side to capture a screenshot of the current visualization. This screenshot hides all UI elements so that you only see the visualizer.
+Tap the camera button on the right side to capture a screenshot of the current visualization.
+
+
+This screenshot hides all UI elements so that you only see the visualizer.
 
 Tap the video button to start recording a video. This will show a prompt asking if you'd also like to record your microphone input in addition to any playing music. Tap the video button again to stop recording.
 
@@ -69,9 +116,17 @@ Tap the video button to start recording a video. This will show a prompt asking 
 
 After taking a video or screenshot, you can download it to your photos or share it using the standard iOS share sheet. You can also trim videos right in the app.
 
-## Advanced options
+# Advanced options
 
-### Foreground occlusion
+## Spatial audio
+
+Tap on the `...` to turn on spatial audio. When spatial audio is enabled, the currently playing song will sound like it is coming from the physical location of the visualizer in the real world. This means:
+
+- Volume will decrease as you move away from the visualizer.
+- Smaller visualizers will also be softer than larger ones.
+- The direction of sound will change based on your orientation to the visualizer. This requires headphones to hear.
+
+## Foreground occlusion
 
 (Note that foreground occlusion requires a device with a LiDAR sensor, such as the iPhone 12 Pro)
 
@@ -90,7 +145,7 @@ For best results with foreground occlusion:
 - Foreground objects can only be around 4 meter from the phone. This is a limitation of the LiDAR sensor.
 
 
-## Feedback
+# Feedback
 
 Love Beatsy? Be sure to tell your friends about it and share any cool visualizations you create using the app. If you are feeling especially generous, please also write an App Store review. This really helps other people find the app.
 
