@@ -8,23 +8,27 @@
     </a>
 </p>
 
-Beatsy is an augmented reality music visualizer app for iPhone and iPad. Transform the world around you using the beat of music. The app is [available for free on the App Store][app].
+Beatsy is an augmented reality music visualizer app for iPhone and iPad that lets you transform the world to the beat of your music. The app is [available for free on the App Store][app].
 
-This documentation covers the basics of using Beatsy. If you run into any issues or have any feature requests, you can also [file an issue][issues] here.
+This document covers the basics of using Beatsy. If you run into any issues or have any feature requests, you can also [file an issue][issues] here.
 
 # Using Beatsy
 
-Beatsy's augmented reality music visualizers let you distort the shapes and colors of the world around you using either music from your library or audio from the microphone.
+Beatsy's augmented reality music visualizers let you distort the world around you to music from your library or audio from the microphone.
 
 ## Placing visualizers
 
-To get started, first you need to place a visualizer in the world. Most often, this means placing the visualizers on a flat horizontal or vertical surfaces. The app will walk you through the placement process.
+To get started, first you need to place a visualizer in the world. This often means finding a flat horizontal or vertical surface to place it on. The app will walk you through the placement process.
 
-If a valid surface is detected, you will see a grid that shows where the visualizer will be placed.
+A set of circles shows where the visualizer will be placed.
 
-If you don't see a grid, it likely means that we cannot detect the surface you are looking at. To help with detection:
+<p align="center">
+    <img src="documentation/placement-preview.png">
+</p>
 
-- Make sure you are trying to place the visualizer on a relatively flat surface. Surfaces with signficant bumps or holes may not be detected. 
+If you don't see this placement preview, it likely means that the app has not yet detected the surface you are looking at. To help with detection:
+
+- Make sure you are trying to place the visualizer on a relatively flat surface. Very rough or holey surfaces may not be detected. 
 - Try moving the device around while keeping it aimed at the surface. On devices without a LiDAR sensor, this helps with surface detection.
 - Make sure there is enough light for the cameras. Surface detection struggles in low light scenes.
 - Use a surface that has some visual details. Surface detection struggles when pointed at solid color surfaces, such as solid white walls.
@@ -32,15 +36,17 @@ If you don't see a grid, it likely means that we cannot detect the surface you a
 
 > 🎵 **Note**: While placing, drag horizontally to rotate the visualizer and pinch to scale it up and down. These controls also work after you have place the visualizer.
 
-Once you are happy with the visualizer's location, press the ✔️ to continue.
+Once you are happy with the visualizer's location, press the `Place` button to continue.
 
 ### Placing Immersive visualizers
 
-If your device has a LiDAR sensor—such as the iPad pro, the iPhone 12/13 Pro—some of Beatsy's visualizers instead operate in 3D space. These immersive visualizers can be placed anywhere in the world, not just on flat surfaces.
+If your device has a LiDAR sensor—such as the iPad pro or the iPhone 12/13 Pro—some of Beatsy's visualizers instead operate in 3D space. These immersive visualizers can be placed anywhere in the world, not just on flat surfaces.
 
 When placing an immersive visualizer, you place the center of the visualizer instead of placing the visualizer on the surface it will distort. The placement position is previewed by a red ball:
 
-![]()
+<p align="center">
+    <img src="documentation/placement-immersive-preview.png">
+</p>
 
 In general, immersive visualizers can only be placed within 5 meters of your device's current position. This is a limitation of the LiDAR sensor. 
 
@@ -93,6 +99,8 @@ Tap on the wave icon to change the visualizer or edit the settings for the curre
 - `Color Waves` - Sends waves of color rippling out from a the center of the visualizer. These colors can be customized and correspond to the different components of the music (bass, mid, treble). Support immersive, 3D distortion on devices with a LiDAR sensor.
 
 - `Lava Lamp` - Creates blobs of color that respond to the music. These blobs slowly drift upwards. Support immersive, 3D distortion on devices with a LiDAR sensor.
+
+- `Ferro Face` - Applies the `Ferro` shader to your face instead. Includes three different presets.
 
 ## Sharing
 
